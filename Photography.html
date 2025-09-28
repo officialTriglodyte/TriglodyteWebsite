@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Gallery Page</title>
+  <style>
+    /* Reset some defaults */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Top Bar */
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #222;
+      padding: 10px 20px;
+    }
+
+    .topbar .left button,
+    .topbar .right button {
+      background: #444;
+      border: none;
+      color: white;
+      padding: 10px 15px;
+      margin: 0 5px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .topbar button:hover {
+      background: #666;
+    }
+
+    /* Sections */
+    section {
+      margin: 40px auto;
+      padding: 0 20px;
+      max-width: 1200px;
+    }
+
+    section h2 {
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+    }
+
+    /* Image grid */
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+
+    .image-grid img {
+      width: 100%;
+      border-radius: 10px;
+      display: block;
+      object-fit: cover;
+    }
+
+    /* Responsive tweaks */
+    @media (min-width: 1024px) {
+      .image-grid {
+        grid-template-columns: repeat(5, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .image-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    /* Light mode */
+    body {
+        background: #f9f9f9; /* your light theme background */
+        color: #333;
+    }
+
+    /* Dark mode */
+    @media (prefers-color-scheme: dark) {
+        body {
+            background: #121212; /* your dark theme background */
+            color: #eee;
+    }
+
+    .topbar {
+        background: #111;
+    }
+
+    .topbar .left button,
+    .topbar .right button {
+        background: #333;
+    }
+
+    .topbar button:hover {
+        background: #555;
+    }
+
+    section h2 {
+        border-bottom-color: #444;
+    }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Top bar -->
+  <div class="topbar">
+    <div class="left">
+      <button>Menu</button>
+    </div>
+    <div class="right">
+      <button>Home</button>
+      <button>Gallery</button>
+      <button>About</button>
+      <button>Contact</button>
+    </div>
+  </div>
+
+  <!-- Sections -->
+  <section>
+    <h2>Nature Gallery</h2>
+    <div class="image-grid">
+      <img src="images/nature/img1.jpg" alt="Nature 1">
+      <img src="images/nature/img2.jpg" alt="Nature 2">
+      <img src="images/nature/img3.jpg" alt="Nature 3">
+      <img src="images/nature/img4.jpg" alt="Nature 4">
+      <img src="images/nature/img5.jpg" alt="Nature 5">
+      <img src="images/nature/img6.jpg" alt="Nature 6">
+    </div>
+  </section>
+
+  <section>
+    <h2>Cityscapes</h2>
+    <div class="image-grid">
+      <img src="images/city/img1.jpg" alt="City 1">
+      <img src="images/city/img2.jpg" alt="City 2">
+      <img src="images/city/img3.jpg" alt="City 3">
+      <img src="images/city/img4.jpg" alt="City 4">
+      <img src="images/city/img5.jpg" alt="City 5">
+    </div>
+  </section>
+
+  <section>
+    <h2>Wildlife</h2>
+    <div class="image-grid">
+      <img src="images/wildlife/img1.jpg" alt="Wildlife 1">
+      <img src="images/wildlife/img2.jpg" alt="Wildlife 2">
+      <img src="images/wildlife/img3.jpg" alt="Wildlife 3">
+      <img src="images/wildlife/img4.jpg" alt="Wildlife 4">
+      <img src="images/wildlife/img5.jpg" alt="Wildlife 5">
+    </div>
+  </section>
+
+</body>
+</html>
